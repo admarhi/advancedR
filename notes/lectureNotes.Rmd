@@ -1,0 +1,56 @@
+# Advanced Programming in R
+### Lecture Notes - Adrian Hirt - Summersemester 2022
+
+#### General 
+Good code should always be easy to check and reproduce.
+
+#### Vectorization in R
+Vectorization makes operations simpler, and code more readable. In addition, it is a simple method to store data and allows to manipulate and/or analyse it.
+
+#### Using && or || instead of & or |
+When using & or | we expect vectors (several values in c()). When using && or || however, we expect scalar (single) values. Therefore, the usage of the operators depends on the desired outcome. 
+
+#### if statements in R
+
+```r
+a <- 3
+b <- 8
+````
+
+```r
+if (is.numeric(a) & is.numeric(b)) {
+  sum(a,b)
+} else if (is.character(a) & is.character(b)){
+  paste(a, b)
+} else {
+  "error"
+}
+````
+
+#### nested ifelse
+```r
+df <- data.frame(team = c('A', 'A', 'B', 'B', 'B', 'C', 'D'),
+                 points = c(4, 7, 8, 8, 8, 9, 12),
+                 rebounds = c(3, 3, 4, 4, 6, 7, 7))
+
+
+df$rating <- ifelse(df$points > 7, 'great', 
+                    ifelse(df$points > 5, 'ok', 'bad')
+                    
+````
+
+#### seq_along
+Instead of:
+```r
+for(i in 1:length(wek)) {
+  print(wek[i])
+}
+````
+we can use seq_along to iterate along the vector, as it is more elegant and more robust.
+```r
+for(i in seq_along(wek)) {
+  print(wek[i])
+
+1:length(c())
+seq_along(c())
+````

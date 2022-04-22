@@ -1,0 +1,45 @@
+---
+title: "md_present"
+output: 
+  beamer_presentation: 
+    theme: Madrid
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(reticulate)
+```
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
+## Slide with python output
+```{python}
+for i in range(0,10):
+  print(i)
+```
+
