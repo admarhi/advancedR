@@ -1,0 +1,50 @@
+---
+title: "FAO_SlaugtherData"
+author: "Adrian Hirt"
+date: "`r Sys.Date()`"
+output: 
+  ioslides_presentation:
+    widescreen: true
+  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(readr)
+library(dplyr)
+library(ggplot2)
+
+```
+
+## The Purpose
+
+To visualize how the ratio of **animals slaughtered to inhabitants** has shifted globally from 1980-2018. 
+
+## Why?
+Animal agriculture sits at the intersection of some of the most pressing issues of our time. Intensive animal farming is a major factor in antimicrobial resistance, climate change and animal welfare. Particularly in developed countries the magnitude of the industry is often overlooked - this projects aims to visualize a broken system. 
+
+## How?
+
+The visualization will consist of two interactive world maps, presented as a shiny web application.  
+
+1. The user will be able to select species and year. The map will be color-coded, indicating the country with the relative highest ratio in the given year. 
+2. The user will be able to select a species and be presented with a color-coded world map, highlighting the countries with the most significant increase of slaughter numbers per capita.
+
+
+## The Data
+
+The data stems from [FAOSTAT](https://www.fao.org/faostat/en/#home), run by the Food and Agriculture Organization of the United Nations ([FAO](https://www.fao.org/home/en)).
+
+
+
+```{r data, echo = TRUE}
+
+
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
