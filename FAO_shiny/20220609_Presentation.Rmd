@@ -1,10 +1,10 @@
 ---
-title: "FAO_SlaugtherData"
+title: "A New Perspective on Global Animal Production"
 author: "Adrian Hirt"
 date: "`r Sys.Date()`"
 output: 
-  ioslides_presentation:
-    widescreen: true
+  ioslides_presentation
+    
   
 ---
 
@@ -18,7 +18,7 @@ library(ggplot2)
 
 ## The Purpose
 
-To visualize how the ratio of **animals slaughtered to inhabitants** has shifted globally from 1980-2018. 
+To visualize how the ratio of **animals slaughtered to inhabitants** has shifted globally over the course of the last six decades. 
 
 ## Why?
 Animal agriculture sits at the intersection of some of the most pressing issues of our time. Intensive animal farming is a major factor in antimicrobial resistance, climate change and animal welfare. Particularly in developed countries the magnitude of the industry is often overlooked - this projects aims to visualize a broken system. 
@@ -33,18 +33,20 @@ The visualization will consist of two interactive world maps, presented as a shi
 
 ## The Data
 
-The data stems from [FAOSTAT](https://www.fao.org/faostat/en/#home), run by the Food and Agriculture Organization of the United Nations ([FAO](https://www.fao.org/home/en)).
+### Production/Slaughter Data
 
+- From [FAOSTAT](https://www.fao.org/faostat/en/#home), run by the Food and Agriculture Organization of the United Nations ([FAO](https://www.fao.org/home/en)).
+- Data mostly available for developed countries
+- For most developing countries incomplete data (i.e., only some species or incomplete timeframe)
 
+## The Data
 
-```{r data, echo = TRUE}
+### Population Data
 
+- From the [Department of Economic and Social Affairs of the United Nations](https://population.un.org/wpp/Download/Standard/Population/)
 
-```
+## Shiny App
 
-## Slide with Plot
-
-```{r pressure}
-plot(pressure)
-```
-
+- Interactive [Choropleth Map](https://leafletjs.com/examples/choropleth/)
+- Built on [leaflet](https://rstudio.github.io/leaflet/) library
+- Information displayed on hover
